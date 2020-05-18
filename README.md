@@ -10,7 +10,7 @@ Further documentation can be found on the [GRAL Homepage](http://lampz.tugraz.at
 This repository is intended to be used for the exchange of experiences and advanced users are invited to contribute their recommendations to the document. 
 
 ## Download latest release
-* [Release](https://github.com/GralDispersionModel/GRALRecommendations/releases/latest/download/Recommendations.pdf)
+* [Recommendations.pdf](https://github.com/GralDispersionModel/GRALRecommendations/releases/latest/download/Recommendations.pdf)
  
 ## Built With
 * [LyX](https://www.lyx.org/) 
