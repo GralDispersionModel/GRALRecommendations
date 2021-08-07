@@ -1,0 +1,4730 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+
+\end_preamble
+\options captions=tableheading
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "cmtt" "default"
+\font_math "libertine-ntxm" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_title "GRAL Recommendations"
+\pdf_author "Dietmar Oettl, Markus Kuntner"
+\pdf_subject "GRAL Dispersion Model"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue,citecolor=blue"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #5500ff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.8cm
+\topmargin 2cm
+\rightmargin 2.8cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 0.7cm
+\footskip 0.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing onehalf
+
+\series bold
+\bar under
+Recommendations when using the GRAL/GRAMM modelling system 
+\end_layout
+
+\begin_layout Author
+
+\series bold
+\bar under
+Version 21.09
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\size largest
+Author
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\series bold
+\size larger
+Dietmar Öttl 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\size largest
+Contributing authors
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\series bold
+\size larger
+Markus Kuntner 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\series bold
+\size larger
+Francine Manansala
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 480bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Copyright (C) 2020 Dietmar Öttl, Markus Kuntner.
+ Permission is granted to copy, distribute and/or modify this document under
+ the terms of the GNU Free Documentation License, Version 1.3 or any later
+ version published by the Free Software Foundation; with no Invariant Sections,
+ no Front-Cover Texts, and no Back-Cover Texts.
+ A copy of the license is included in the section entitled "GNU Free Documentati
+on License"
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\paragraph_spacing onehalf
+Introduction
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\align block
+This document presents recommended methods and settings for the atmospheric
+ dispersion modelling system GRAL and the non-hydrostatic mesoscale wind-field
+ model GRAMM.
+ These recommendations are based on experience and insights gained during
+ the quality assurance procedure (see the GRAL/GRAMM documentation reports)
+ and practical applications.
+ This document aims to help users to obtain reasonable results for a wide
+ range of applications.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+This document supplements the detailed model descriptions found in the documents
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Documentation of the Lagrangian Particle Model GRAL (Graz Lagrangian Model)
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Documentation of the prognostic mesoscale model GRAMM (Graz Mesoscale Model)
+\begin_inset Quotes erd
+\end_inset
+
+ and the documentation of the graphical user interface 
+\begin_inset Quotes eld
+\end_inset
+
+GRAL Manual - GRAL Graphical User Interface
+\begin_inset Quotes eld
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\paragraph_spacing onehalf
+Known limits and shortcomings
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+In the current version of GRAL the following physical processes are not
+ implemented
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Chemistry
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+In the current version of GRAL the following shortcomings are known
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Sometimes unrealistically high concentrations occur at facades, probably
+ because the reflexion and/or the well-mixed criterion are not treated well
+ enough by the model.
+ Thus, it is not recommended to use computed concentrations at facades of
+ buildings/obstacles.
+ At least one grid point shall be between the point of interest and the
+ side wall of a building.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Due to the stepped resolution of terrain in GRAL simulations, stepped patterns
+ may occur in the resulting concentration maps (see chapt.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Stepped-horizontal-concentration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for advice).
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\paragraph_spacing onehalf
+Recommendations
+\end_layout
+
+\begin_layout Subsection
+\paragraph_spacing onehalf
+General hints for using GRAMM/GRAL
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Roughness length
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:roughness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ lists ranges for roughness lengths per land-use type.
+ 
+\end_layout
+
+\begin_layout Standard
+If running GRAL without GRAMM, one of these values representing the model
+ domain may be input into the graphical user interface (GUI).
+ When running GRAL in this way, the roughness length as defined in the GUI
+ is used for the entire model domain.
+ Even if buildings are taken explicitly into account in GRAL simulations,
+ it is necessary to set a mean roughness length in such cases, except the
+ option “Adaptive Roughness” is used.
+ If GRAL is coupled with GRAMM, the user-defined land-use file and therefore
+ spatially varying surface roughness lengths are imported from the GRAMM
+ model.
+ The prescribed roughness value in the GUI is not used in this case.
+ 
+\end_layout
+
+\begin_layout Standard
+If the Adaptive Roughness option is used, the GUI roughness length defines
+ the minimum surface roughness in the domain area, the specified Adatpive
+ Roughness value defines the maximum surface roughness.
+ The surface roughness is estimated based on buildings and vegetation areas.
+ For vegetation with a height of up to 1 m, the height is interpreted as
+ roughness length.
+\end_layout
+
+\begin_layout Standard
+The optional file 
+\begin_inset Quotes eld
+\end_inset
+
+RoughnessLengthsGral.dat
+\begin_inset Quotes erd
+\end_inset
+
+ overrules the adaptive surface roughness algorithm and the GRAMM rouhness
+ and defines the spatially varying surface roughness based on the values
+ defined in this file.
+ This file must be an ESRI ASCii raster file and the file must match the
+ flow field raster (cell number, cell size).
+\end_layout
+
+\begin_layout Standard
+When running GRAMM, the user may create a CORINE-based land-use file containing
+ spatially non-homogenous roughness lengths.
+ If GRAMM is used with the Adaptive Roughness option, the Adaptive Roughness
+ is only used if it is higher than the GRAMM Roughness.
+ When coupling with GRAMM, the Adaptive Roughness option should be used
+ carefully (small maximum values).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:roughness"
+
+\end_inset
+
+ Approximate roughness lengths according to the German-guideline VDI 3783-8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Z0 [m]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,00001 – 0,005
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ice-, Snow-, Water-surfaces
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,005 – 0,1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arable land, Pastures
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,1 – 0,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parks, Sub-urban areas, Villages, Bushes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,5 – 2,0 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In city centres with extremely tall buildings, even larger values might
+ be appropriate (e.g.
+ Ling et al., 2017)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Forests, Cities, Downtown areas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Determination of stability classes
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+It is recommended to use a slightly modified form of the solar radiation
+ delta-T (SRDT) method described in US-EPA (2000) to compute stability classes
+ A-G (1 - 7).
+ The method uses the surface layer wind speed (measured at or near 10
+\begin_inset space ~
+\end_inset
+
+m) in combination with measurements of total solar radiation during the
+ day and a low-level vertical temperature difference ∆T at night.
+ In order to distinguish between ‘DAYTIME’ and ‘NIGHTTIME’, it is recommended
+ to use a threshold for solar radiation of 20
+\begin_inset space ~
+\end_inset
+
+W/m² (note that instruments sometimes have offsets, thus a threshold of
+ 0
+\begin_inset space ~
+\end_inset
+
+W/m² is not recommended).
+ Note that GRAL uses figures instead of letters to assign stability classes
+ (i.e.
+ A = 1,…,G = 7).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Pasquill-Gifford-(P-G)-stability"
+
+\end_inset
+
+Pasquill-Gifford (P-G) stability categories
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DAYTIME (solar radiation ≥ 20 W/m²)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solar radiation [W/m²]
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wind speed [m/s]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+≥925
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+925-675
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+675-175
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<175
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 - 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 – 5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 – 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+≥ 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="4.9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NIGHTTIME (solar radiation < 20 W/m²)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertical Temperature Gradient
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wind speed [m/s]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< 0°C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+>0°C
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 – 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+> 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\paragraph_spacing onehalf
+Mesoscale wind field simulations with GRAMM
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+General remarks
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Currently, the standard procedure is as follows: a meteorological time series
+ is classed as defined by the user.
+ For each binned situation GRAMM calculates quasi steady-state solutions
+ for the flow field.
+ Using such simple meteorological input data for a mesoscale model means
+ that large uncertainties in computed flow fields evolve due to unknown
+ surface temperatures, soil temperatures, soil moisture distributions, snow
+ cover, etc.
+ For this reason, the following the following procedure is recommended.
+\end_layout
+
+\begin_layout Itemize
+Use an artificial wind rose (delivered with GRAMM) as meterological input
+ (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Artificial-wind-rose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The artificial wind rose contains a variety of wind speed, wind direction
+ and stability classes.
+\end_layout
+
+\begin_layout Itemize
+Use a sufficient number of wind speed and wind direction classes.
+ 
+\end_layout
+
+\begin_layout Itemize
+In mountainous areas the variability of the wind fields can be increased
+ by using the sunrise Option
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Post-processing procedures are provided by the GUI
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+Re-order function:
+\shape default
+\bar default
+ This function can be applied to any existing GRAMM wind field simulation.
+ The procedure looks up every computed flow situation discriminating between
+ stable, neutral, and convective conditions, and selects the best-fitting
+ simulation for each classed meteorological situation.
+ The re-order function can be used but is not further developed anymore.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+Match-to-observation function:
+\shape default
+\bar default
+ This function can be applied to any existing GRAMM wind field simulation.
+ The procedure looks up every computed flow situation discriminating between
+ stable, neutral, and convective conditions, and selects the best-fitting
+ simulation for each classified meteorological situation.
+ This function can be used for multiple meteorological observations at any
+ location within the model domain.
+ It enables the following modelling strategy: first, for a specific classificati
+on scheme of wind speed, and -direction defined by the user, all theoretically
+ possible situations are simulated, using an artificial, equally distributed
+ wind rose.
+ In a second step, these simulations are matched to any observational site
+ within the model domain.
+ Whenever new observations are available or a detailled evaluation is needed
+ for a part of the model domain, these existing wind fields can again be
+ matched and need not to be simulated again.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Artificial-wind-rose"
+
+\end_inset
+
+Artificial wind rose
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/ArtificialWindrose.jpg
+	lyxscale 50
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The match-to-observation functional should be the preferred method in most
+ GRAMM applications as it has the potential to improve simulation results
+ enormously.
+ Note that as wind-fields change after the match, stability classes will
+ do so, too.
+ Based on our experience, it might happen in less complex terrain, that
+ the frequencies of each stability class throughout the model domain will
+ deviate substantially from observed ones.
+ Setting the weighting factors for each station used in the match function
+ to a very low value, e.g.
+ 0.05 instead of the default value 1, increases the influence of stability
+ classes compared to wind direction and wind speed.
+ Weighting factors >1 lower the influence of the stability classes and increase
+ the weigthing of wind speed and wind direction.
+ Using the latest GRAMM and GUI (20.01 or later) version, the vectorial optimizat
+ion method is preferred.
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Complex terrain
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In the presence of complex terrain it is strongly recommended to apply GRAMM
+ to get 3D wind fields as input for GRAL.
+ GRAMM can take into account effects of drainage flows, slope winds, blocking-,
+ channeling of flows, and re-circulation behind topographical elevations.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+For regulatory purposes, GRAMM is driven by the same meteorological data
+ as GRAL, i.e.
+ a time series of wind speed, wind direction, and stability class at a certain
+ height.
+ It should be stressed that the interpretation of the meteorological input
+ data depends on the size of the GRAMM modelling domain.
+ Generally, the meteorological input data represents the so-called ‘large-scale
+ forcing’, i.e.
+ the forcing originating outside of the modelling domain.
+ For instance, for areas ranging a few tens of kilometres, the large-scale
+ forcing consists of synoptic-scale pressure systems and pressure gradients
+ generated by for example, mountain ridges and their respective low-lands
+ or between land surfaces and large water bodies.
+ Typically, mountain-valley or land-see breeze systems have pressure gradients
+ with length scales of more than 100 km.
+ Therefore, if the model domain is larger than this, these pressure differences
+ can be captured by the model.
+ In this case, synoptic-scale pressure differences remain as the only large-scal
+e force.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The topography file used for GRAMM simulations 
+\shape italic
+\bar under
+should not be smoothed
+\shape default
+\bar default
+ at the boundaries for GRAMM versions 19.1.
+ and higher.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+It is recommended to use the online functionality of the GUI, which helps
+ to track the modelled flow fields.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In the case of numerical problems, one could try to reduce the 
+\shape italic
+\bar under
+relaxation factors
+\shape default
+\bar default
+ and/or the 
+\shape italic
+\bar under
+maximum allowed time step
+\shape default
+\bar default
+.
+ By default, these values are 0.15 and 10
+\begin_inset space ~
+\end_inset
+
+s regardless of the horizontal grid size.
+ GRAMM automatically adjusts both factors to keep simulations numerically
+ stable as far as possible.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The 
+\shape italic
+\bar under
+integration time
+\shape default
+\bar default
+ should be set in dependence on the size of the modelling domain and the
+ intended physical phenomena to be simulated.
+ For instance, if one attempts to simulate local phenomena such as slope
+ winds or flow channelling, an integration time of one hour will be sufficient
+ in most applications.
+ However, if a user wishes to simulate mountain-valley wind systems or land-sea
+ breezes, the integration time needs to be higher as the characteristic
+ time scale of these phenomena are larger.
+ An integration time of about 3 - 4 hours may often be suitable.
+ Further, it is highly recommended that when simulating mountain-valley
+ and land-sea winds, that the ‘sunrise option’ in the GUI is selected.
+ This option invokes a transient computation of the sun’s incoming radiation.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+GRAMM adjusts the user-defined integration time in dependence on wind speed
+ and stability in order to minimize the computational time.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Integration-times-[t]"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ provides an overview of the automatically adjusted integration times in
+ GRAMM.
+ As shown, when the sunrise option is selected by the user, the simulation
+ time in convective conditions is always set to 6 hours regardless of the
+ integration time chosen by the user.
+ As already mentioned, the sunrise option should only be selected when simulatin
+g mountain-valley or land-sea winds with very large model domains.
+ In the case of stability classes 6 and 7, integration times in GRAMM are
+ extended for low-wind-speed situations.
+ In this model set-up cold-air drainage flows are expected to develop.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Integration-times-[t]"
+
+\end_inset
+
+Integration times [t] in GRAMM in [s] in dependence on wind speed and stability
+ class.
+ The numbers in brackets apply when the sunrise option is invoked
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+SC 1 – 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+SC 4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+SC 5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+SC 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+SC 7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u ≤ 3 m/s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t ≤ 600 s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t = t
+\shape slanted
+\size footnotesize
+user
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u ≤ 2 m/s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u ≤ 0.5 m/s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = t
+\backslash
+textsubscript{user}(t = 21600 s)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = Min[1.5 t
+\backslash
+textsubscript{user}, 3600] (t = 3 t
+\backslash
+textsubscript{user}) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = Min[2 t
+\backslash
+textsubscript{user}, 3600]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 < u ≤ 5 m/s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(t = 3 t
+\backslash
+textsubscript{user})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(t = Min[2 t
+\backslash
+textsubscript{user}, 7200])
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = 0.5 t
+\backslash
+textsubscript{user} (t = 21600 s)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u > 2 m/s 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5 < u ≤ 1 m/s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 < u ≤ 6 m/s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = t
+\backslash
+textsubscript{user}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = Min[1.5 t
+\backslash
+textsubscript{user}, 3600] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = 0.3 t
+\backslash
+textsubscript{user} (t = 21600 s)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(t = Min[1.5 t
+\backslash
+textsubscript{user}, 7200])
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6 m/s < u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 m/s < u
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = 0.17 t
+\backslash
+textsubscript{user} (t = 21600 s)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+t = Min[t
+\backslash
+textsubscript{user}, 3600]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Flat terrain applications of GRAMM
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+There are also several reasons to apply GRAMM in relatively flat terrain:
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+To consider land-use changes in subsequent GRAL dispersion simulations 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+To consider a wind-direction shift in the lower boundary layer due to surface
+ roughness (Ekman shift) 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+To include a proper transition between flat and complex terrain 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In flat terrain, small forces introduced by the boundary conditions or numerical
+ algorithms can have a large effect on simulated flow fields.
+ Numerous tests (e.g.
+ Wilhelm, 2017) have shown that the standard GRAMM set-up is not appropriate
+ for simulations in very flat terrain.
+ Therefore, the ‘flat terrain option’ is available in the GUI, where some
+ settings in GRAMM are changed to better represent flat-terrain conditions.
+ In particular, different boundary conditions at the lateral boundaries
+ for momentum (homogenous von Neuman BC) is used.
+ In addition, the numerical computation of air temperature and radiation
+ is neglected.
+ It is highly recommended to use the flat terrain option for the aforementioned
+ modelling objectives.
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+General issues
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+It is recommended to use a minimum of 15 vertical layers in GRAMM simulations,
+ and a cell height of about 10 m for the first layer above ground level.
+ Horizontal grid sizes can range from a few tens of metres up to several
+ kilometres.
+ The finer the horizontal resolution, the more prone GRAMM is to numerical
+ instabilities.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+How to check if GRAMM results are numerically stable?
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+There are several options to track numerical stability of the model: 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Once GRAMM is launched, the user can inspect the numerical values on the
+ screen in the CMD-window (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Controlling-convergence-and"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ If these values increase constantly, numerical instability is likely.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+The online functionality of the GUI can be used to inspect simulated flow
+ fields for every time step of the simulation.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+When the computed wind speeds exceed 55
+\begin_inset space ~
+\end_inset
+
+m/s and 20
+\begin_inset space ~
+\end_inset
+
+m/s in the horizontal and vertical directions respectively, a ‘Problemreport.txt’
+ will be written into the ‘Computation’ folder.
+ The report is a simple text file, which can be viewed by any text editor.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Mass divergence may increase during the simulation causing it to be larger
+ at the end of the simulation than at the beginning.
+ In this case, the ‘Problemreport.txt’ will include the following error message:
+ ‘Final mass divergence is larger than initial mass divergence.
+ Possible numerical instabilities detected for flow field: xx’, 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Whenever GRAMM becomes numerically unstable, the computation core repeats
+ the simulation with reduced maximum time steps and in the case of continuing
+ instabilities, relaxation factors will be reduced.
+ If the simulation is forced to repeat a weather situation (up to four attempts)
+, the number right to the one indicating the weather situation is increased
+ (e.g.
+ 28/2 is the second attempt of simulating weather situation 28).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+If the simulation is still unstable, the following recommendations may help
+ to solve the problem: 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Decrease the maximum allowed time step
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Decrease the relaxation factors 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Increase the number of cells at the boundaries over which topography is
+ smoothed 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Increase the horizontal and/or the vertical grid spacing 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Controlling-convergence-and"
+
+\end_inset
+
+Controlling convergence and numerical stability of mesoscale flow simulations
+ with GRAMM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/01GRAMM.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In some cases, the user may require a small modelling domain.
+ Consequently, drainage flows might be underestimated or not simulated at
+ all.
+ This is because some of the hilly terrain causing drainage flows may be
+ located outside of the model domain.
+ The ‘catabatic forcing’ option may help to obtain better representation
+ of drainage flows in such situations.
+ In addition, the catabatic forcing can save CPU time in order to represent
+ catabatic processes with smaller integration times.
+ If possible however, it is recommended that the model domain is selected
+ large enough to contain all important terrain characteristics playing a
+ role in the development of drainage flows instead of using the 'catabatic
+ forcing' option.
+\end_layout
+
+\begin_layout Subsection
+\paragraph_spacing onehalf
+Microscale flow field simulations with GRAL
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Prognostic flow field model
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The microscale flow field model in GRAL is a fully prognostic, non-hydrostatic
+ model that takes into account the effects of buildings on dispersion.
+ Thus, it is a very powerful tool to simulate flow around obstacles.
+ However, the model can also be prone to numerical instabilities due to
+ the complex, iterative-solution algorithm applied.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In order to resolve obstacles with some accuracy, it is recommended to use
+ a horizontal grid resolution below 10
+\begin_inset space ~
+\end_inset
+
+m.
+ Best results are seen with grid sizes in the range of 2 – 4
+\begin_inset space ~
+\end_inset
+
+m.
+ The vertical grid size for the first layer above ground should be in the
+ range of 1 – 2
+\begin_inset space ~
+\end_inset
+
+m.
+ Vertical grid spacing below 1 m may lead to numerical instabilities.
+ In addition, it is recommended to use the online functionality of the GUI
+ to inspect flow fields during the simulation process.
+ Alternatively, the user can analyse the GRAL flow fields when available.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Generally, it can be stated that numerical instabilities can be avoided
+ in most cases by increasing the vertical grid spacing or by decreasing
+ the horizontal resolution.
+ From experience, cubic-like grid cells (i.e.
+ horizontal and vertical grid spacing are more or less equal) appear to
+ ensure best numerical stability of the model.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In many cases, problems can be avoided by keeping the model domain boundaries
+ free of any obstacles.
+ It is highly recommended that no obstacles are placed near the boundaries
+ of the model within an area of approximately 10 times the horizontal grid
+ size.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+As GRAL has been thoroughly tested with the below set of parameter values
+ prescribed in the GUI, it is not recommended to change these, as the model
+ may become numerically unstable.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The recommended set of parameter values is as follows: 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Number of vertical cells: 25 – 40 (depending on the max.
+ height of obstacles) 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Minimum iterations: 100 Maximum iterations: 500 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Roughness of building walls: 0.001
+\begin_inset space ~
+\end_inset
+
+m 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+All other parameters related to the microscale flow field model are freely
+ adjustable by the user.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+How is numerical instability identifiable by a user? 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+There are several ways for detecting numerical instabilities: 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Once GRAL is launched, the user can inspect the numerical values printed
+ to the screen in the CMD-window right to the iteration number (see Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Controlling-convergence-and-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ If these figures increase, then numerical instability is very likely, and
+ one of the remedies as described above should be tried out.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Another way is to use the online functionality of the GUI, which allows
+ for inspecting simulated flow fields every time step of the simulation.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+GRAL itself writes a file named ‘Problemreport_GRAL.txt’ in the subdirectory
+ ‘Computation’ whenever implausible wind speeds or non-convergence of the
+ flow computation is detected.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Controlling-convergence-and-1"
+
+\end_inset
+
+Controlling convergence and numerical stability for microscale flow simulations
+ with GRAL, respectively
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/02GRAL.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+How to retrieve information about simulated flows with the microscale flow
+ field model?
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+In some cases, it may be of interest for users to retrieve information about
+ the simulated microscale flow field.
+ For instance, simulated wind speeds behind walls may be needed to compute
+ the effect on fugitive dust emissions due to wind erosion.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+As outlined in the GRAL manual, once receptor points are defined by the
+ user, the time series of simulated flows at these receptor points is stored
+ in the file named ‘GRAL_*NameOfReceptorPoint*.met’.
+ This file is saved in the sub-directory ‘Metfiles’ after invoking the ‘Receptor
+ points’ function (button) in the ‘Computation’ menu.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The below figures show a comparison between simulated flows by GRAMM in
+ complex terrain at a specific point within a built-up area compared to
+ subsequent GRAL simulations.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Deutschlandsberg"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the location of the air quality observations (Deutschlandsberg-A15)
+ and Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wind"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the observed and simulated wind-roses extracted from GRAMM and GRAL.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+It is noted that the GRAMM simulations were carried out with a rather coarse
+ horizontal resolution (300 m), and cannot not take buildings into account.
+ The GRAL simulations were performed with a resolution of 5 m and included
+ buildings.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wind"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that while GRAMM overestimates wind speeds at this site, GRAL is
+ able to reproduce wind speeds well.
+ In addition, wind directions are better captured by the GRAL microscale
+ simulations.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Deutschlandsberg"
+
+\end_inset
+
+Location of the air quality observation site 
+\begin_inset Quotes eld
+\end_inset
+
+Deutschlandsberg-A15“
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/03GRAL.jpg
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Wind"
+
+\end_inset
+
+Observed (left) and simulated (GRAMM: middle; GRAL: right) mean wind-roses
+ at the site Deutschlandsberg-A15 for 2010
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RecommendationsPictures/04aWind.png
+	width 5.5cm
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename RecommendationsPictures/04bWind.png
+	width 5.5cm
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename RecommendationsPictures/04cWind.png
+	width 5.5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Diagnostic flow field model
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+When running the model using the diagnostic option, the microscale flow
+ around obstacles is computed on the bases of mass conservation only.
+ GRAL evaluations clearly indicate that this approach is inferior to the
+ prognostic option.
+ Thus, it is not recommended to use this approach unless the size of the
+ model domain prohibits the use of the prognostic flow field model or the
+ prognostic model cannot be operated to get numerically stable results.
+\end_layout
+
+\begin_layout Subsection
+\paragraph_spacing onehalf
+Pollutant dispersion simulations with GRAL
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+General
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Due to the turbulence parameterisations used in the model it is not recommended
+ to apply GRAL for averaging times smaller than 300 seconds.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Due to the nature of Lagrangian particle models, computed pollutant concentratio
+ns are prone to a sampling error.
+ This error can be kept small when the number of particles is set high enough.
+ A rough guide can be found in the user manual of the graphical user interface.
+ However, it is recommended that the user checks the file ‘Logfile_GRALCore.txt’,
+ which can be found the folder directory where GRAL has been launched.
+ In the case of large model domains with a large numbers of sources, there
+ may not be enough particles defined by the user to adequately represent
+ all sources in the simulation.
+ In these cases, GRAL automatically increases the number of released particles.
+ However, if the total number of particles (as documented in the logfile)
+ is more than 20 % higher than initially defined by the user, it is highly
+ recommended to increase the total number of particles in the simulations
+ and to re-run the simulations from the beginning.
+ The following table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Particlenumber"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ lists the minimum number of particles that are automatically assigned by
+ GRAL, if the total initial number of particles is too low.
+ As of GRAL version 20.01 a file 
+\begin_inset Quotes eld
+\end_inset
+
+Receptor_Timeseries_Transient.txt
+\begin_inset Quotes erd
+\end_inset
+
+ is written at the end of a calculation.
+ This file contains the estimated statistical error for each receptor point
+ in the last line.
+ High error values indicate that too few particles were used in the simulation.
+ A value NA (not available) means that no concentration at this receptor
+ (no particle) has been counted.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Particlenumber"
+
+\end_inset
+
+Minimum number of particles automatically assigned by GRAL in cases, where
+ the total number of particles is too low for a good representation of all
+ sources within the model domain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<column alignment="center" valignment="top" width="2.8cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Point sources
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Tunnel portals
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Area sources
+\end_layout
+
+\begin_layout Plain Layout
+per subarea
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Line sources
+\end_layout
+
+\begin_layout Plain Layout
+per line segment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+< 2,000 sources
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+20 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+20 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+5 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+5 particles/source
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+2,000 – 30,000 sources
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+10 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+10 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+3 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+3 particles/source
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+> 30,000 sources
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+5 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+5 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1 particles/source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+3 particles/source
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Complex-terrain"
+
+\end_inset
+
+Complex terrain
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+If terrain needs to be taken into account, GRAMM simulations must first
+ be completed.
+ These simulations – due to computational reasons – can generally be performed
+ with a rather coarse horizontal resolution (e.g.
+ 50 - 1000
+\begin_inset space ~
+\end_inset
+
+m).
+ For some applications, however, it might be necessary to capture important
+ topographical details at a higher resolution.
+ This can be achieved through the GUI, and by running GRAL after the GRAMM
+ simulations have been completed.
+ This approach is explained below.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The user will need to prepare a topography file in ASCII format.
+ If specific topographical features are important, the use of a high-resolution
+ terrain dataset (e.g.
+ 1
+\begin_inset space ~
+\end_inset
+
+m to 25
+\begin_inset space ~
+\end_inset
+
+m, depending on the application) is recommended.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Once the GRAMM wind fields have been imported into the project, and the
+ GRAL domain has been defined, the user can import the high-resolution topograph
+y file using the menu entry ’File – Import – Original GRAL topography‘ in
+ the GIS window.
+ The GIS window indicates the topography height at the top right of the
+ menu bar.
+ The topography file must be larger than the chosen GRAL domain.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Alternatively, the user may tick the corresponding check box in the menu
+ ‘Computation’ of the GUI before starting the GRAL simulation.
+ Once the topography file has been selected, the GUI automatically generates
+ a new topography file for use in GRAL.
+ This functionality is illustrated in the example below.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+
+\shape italic
+\bar under
+Example: Pollutant dispersion in the vicinity of a stone quarry
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Three simulations (tests) were performed with different settings, as summarised
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Test-configurations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The same GRAMM wind fields for the area were imported for all three tests.
+ The GRAMM domain had a horizontal resolution of 300 m.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Test-configurations"
+
+\end_inset
+
+Test configurations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="4cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Test no.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+GRAMM configuration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+GRAL configuration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Topography used
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+GRAMM run with a coarse grid (300 m horizontal resolution) and imported
+ into GRAL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+GRAL run with a fine grid (5 m horizontal resolution)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+Topography file with a horizontal resolution of 300 m included in GRAMM
+ only
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+GRAMM run with a coarse grid (300 m horizontal resolution) and imported
+ into GRAL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+GRAL run with a fine grid (5 m horizontal resolution)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+A high-resolution (3 m) topography file was created using GIS and imported
+ into GRAL using the ‘Use original topographical data for GRAL’ check box
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+GRAMM run with a coarse grid (300 m horizontal resolution) and imported
+ into GRAL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+GRAL run with a fine grid (5 m horizontal resolution) Prognostic microscale
+ flow field invoked in the ‘GRAL settings’ window 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\paragraph_spacing onehalf
+Test 2 method applied
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The topography and predicted concentrations for Test 1, Test 2 and Test
+ 3 are presented in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, respectively.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The three figures show that the use of highly-resolved terrain data has
+ a significant impact on modelled concentrations.
+ The Test 1 plot (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) show simplified terrain patterns compared to the other tests.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The Test 2 results (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) show a significant improvement in the representation of terrain in GRAL.
+ It is important to note here that in the case of Test 2, there was almost
+ no increase in the simulation time.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Due to the ‘stepped’ sides of the stone quarry, recirculation zones and
+ rather complex microscale flow patterns would probably occur.
+ Thus, invoking the prognostic microscale flow field model in GRAL was the
+ preferred choice and was included in Test 3.
+ 
+\end_layout
+
+\begin_layout Standard
+As the prognostic option can only be invoked in the presence of buildings,
+ which are not of interest in this case, a work-around is necessary to force
+ GRAL to perform microscale flow simulations around the stone quarry.
+ Up to the GRAL version 20.01, a single building could be placed in the GRAL
+ model domain with a height of 0.1
+\begin_inset space ~
+\end_inset
+
+m (indicated by the black rectangle in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Clearly, such a low building has no effect on the flow itself, but simply
+ invokes the prognostic flow model of GRAL in the area, where the building
+ is placed.
+ This resulted in complex flow fields within the quarry, as shown in Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FlowFieldGRAL"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Since the roughness of the ground may be changed by such a building, this
+ method is no longer recommended!
+\end_layout
+
+\begin_layout Standard
+Rather, as of version 20.01, a large sub-domain factor up to 1000 can be
+ selected to force GRAL to calculate a large area prognostically.
+ If you simply enter a building with a height of 2
+\begin_inset space ~
+\end_inset
+
+m and a sub domain factor of 1000, a surrounding area of 2000
+\begin_inset space ~
+\end_inset
+
+m around the building is calculated prognostically.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+The corresponding concentration map is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Note, that the microscale flow field model in GRAL uses the roughness length
+ of the building, so it may be necessary to adjust this value in the ‘GRAL
+ Settings’ screen to represent the conditions of the area of interest.
+ It is noted that simulation times increased in this case by about a factor
+ of 10 relative to Tests 1 and 2.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Test-1"
+
+\end_inset
+
+Test 1 – Computed pollutant dispersion using GRAMM wind fields and GRAMM
+ topography (300 m horizontal resolution) as input for GRAL simulations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/05.gif
+	lyxscale 50
+	width 11cm
+	BoundingBox 0bp 0bp 2243bp 1289bp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Test-2"
+
+\end_inset
+
+Test 2 - Computed pollutant dispersion using GRAMM wind fields and highly-resolv
+ed terrain data (5 m) as input for GRAL simulations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/06.gif
+	lyxscale 50
+	width 11cm
+	BoundingBox 0bp 0bp 2237bp 1300bp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Test-3"
+
+\end_inset
+
+Test 3 - Computed pollutant dispersion using GRAMM wind fields, highly-resolved
+ terrain data (5 m) as input for GRAL simulations, and invoked microscale
+ prognostic flow field model of GRAL by placing a virtual building (black
+ rectangle) in the domain of interest (not recommendend anymore since GRAL
+ version 20.01)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/07.gif
+	lyxscale 50
+	width 11cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FlowFieldGRAL"
+
+\end_inset
+
+Example of a computed microscale flow field within the stone quarry for
+ Test 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/08.gif
+	width 11cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Stepped-horizontal-concentration"
+
+\end_inset
+
+Stepped horizontal concentration patterns in complex terrain
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Due to the resolution of terrain in GRAL simulations (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Example-of-stepped"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), stepped patterns may occur in the resulting concentration maps.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Example-of-stepped"
+
+\end_inset
+
+Example of stepped resolution of terrain in GRAL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/09.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+This problem can be mitigated in the GRAL configuration using the following
+ approaches:
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Avoiding setting the concentration grids at a height close to the ground.
+ For example, in the ‘GRAL Settings’ screen, ensure that the first ‘heights
+ above ground’ value is set to 2
+\begin_inset space ~
+\end_inset
+
+m or higher.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Increasing the vertical dimension of concentration layers (in the ‘GRAL
+ Settings’ tab).
+ This will create a smoothing effect.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Reducing the vertical grid size of the microscale flow-field grid (e.g.
+ setting the vertical thickness of the first layer to 1
+\begin_inset space ~
+\end_inset
+
+m and using a low vertical stretching factor (e.g.
+ 1.0).
+ With the new ‘Flexible stretching factor’ functionality, acceptable computing
+ times can be maintained using small stretching factors for low heights
+ and higher factors for greater heights above the ground
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Setting the horizontal grid resolution of the GRAL concentration grid to
+ be larger (e.g.
+ twice as much) than the horizontal grid resolution of the GRAL internal
+ flow-field grid.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Using one or more of the above approaches should result in a smoothing of
+ the stepped concentration patterns.
+ When visualising contours in the GUI, it is recommended that the low-pass
+ filter option for concentration maps is applied.
+ This option is available in the GUI ‘Layout Manager’ for contour maps and
+ should be activated by default.
+ 
+\end_layout
+
+\begin_layout Standard
+Another (additional) option is to use the function ‘Low pass filter GRAL
+ topography’ (and to save the filtered terrain afterwards) before the calculatio
+n is started.
+ This smoothes the terrain and helps to avoid isolated holes in the topography.
+\end_layout
+
+\begin_layout Standard
+It is generally advised that, when using terrain and evaluating concentration
+ layers, the height of evaluation should be above the value set for ‘Vertical
+ thickness of first layer’.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Dispersion calculation for high stack sources
+\end_layout
+
+\begin_layout Standard
+Especially for dispersion calculations with high stacks, special attention
+ must be paid to a sufficient number of particles.
+ Otherwise, unrealistic concentration fields with strong concentration fluctuati
+ons can occur near the ground.
+ If you ask what defines a high stack: it depends - on the height, the exit
+ velocity and the exit temperature of the exhaust gases and the distance
+ to the receptor points.
+ The higher the stack compared to the distance to the receptor points, the
+ more important is the number of particles.
+ From a stack height of 40
+\begin_inset space ~
+\end_inset
+
+m, special attention should be paid to the following points.
+ 
+\end_layout
+
+\begin_layout Standard
+The following procedure is proposed for estimating the particle number:
+\end_layout
+
+\begin_layout Standard
+In any case, you need some receptor points which are located in the plume
+ direction of the first dispersion situations.
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+Steady state mode
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+Copy the file meteopgt.all and edit the original file.
+ Keep only a few situations within this file.
+ Then start the calculation and wait until it is finished.
+ You will find the estimated statistical uncertainty for each receptor point
+ in the file 
+\begin_inset Quotes eld
+\end_inset
+
+Receptor_Timeseries_Transient.txt
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The error should be below 20
+\begin_inset space ~
+\end_inset
+
+% even after the calculation of only a few situations.
+ If you like to analyze the concentration in certain weather conditions,
+ the uncertainty (for a plume direction towards the receptor point) should
+ be below 5
+\begin_inset space ~
+\end_inset
+
+%.
+ If a receptor point lies within the plume direction and the error value
+ is NA or above 25
+\begin_inset space ~
+\end_inset
+
+%, the number of particles should be increased.
+ Once the uncertainties are low enough, replace the meteogt.all file with
+ the previously created copy and start the final calculation.
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+Transient mode
+\end_layout
+
+\begin_layout Standard
+Copy the file mettimeseries.dat and edit the original file.
+ Keep only a few weather situations within this file.
+ Then start the calculation, wait until it is finished and check the file
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Receptor_Timeseries_Transient.txt
+\begin_inset Quotes erd
+\end_inset
+
+ like in the steady state mode.
+ Afterwards replace the mettimeseries.dat file with the previously created
+ copy and start the final calculation.
+\end_layout
+
+\begin_layout Standard
+Using the transient mode, the grid size of the concentration grid should
+ not exceed 25x25
+\begin_inset space ~
+\end_inset
+
+m², because otherwise very high concentrations of the transient particles
+ and thus additional numerical uncertainties will occur, especially when
+ calculationg the dispersion of very high stack sources (above 80
+\begin_inset space ~
+\end_inset
+
+m).
+ This is somewhat contradictory to the fact that large concentration grids
+ should be used for high stack sources.
+ If necessary, a higher particle number must be used in such cases.
+\end_layout
+
+\begin_layout Subsection
+\paragraph_spacing onehalf
+Pollutant dispersion from road tunnels in GRAL
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Effect of air being sucked in by the tunnel entrance of the opposite lane
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Oettl et al.
+ (2002) found that large amounts (up to 50
+\begin_inset space ~
+\end_inset
+
+%) of tracer emitted from a tunnel portal were sucked in via the tunnel
+ portal of the opposite lane.
+ In GRAL it is recommended to define an area around tunnel portals were
+ traffic enters a tunnel, to take this effect into account.
+ Normally such areas are not very large (see example in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Oppositelane"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and extend more in the direction of traffic flowing into the tunnel portal
+ rather than in the opposite direction.
+ In order to account for this effect, the following steps are necessary
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Define the area around the tunnel portal by digitizing a building (the height
+ of the ‘building’ doesn’t matter) using the GIS functionality of the GUI
+ (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Oppositelane"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Select the prognostic mode in the GUI’s ‘Project’ menu and then press the
+ button ‘Building file’ in the ‘Computation’ menu (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Generating-the-‘buildings.dat’"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ A file named ‘buildings.dat’ will be generated in the subdirectory ‘Computation’.
+ Rename this file to ‘tunnel_entrance.txt’.
+ Ensure that no other real buildings have already been digitized with the
+ GUI, as all coordinates in the file ‘tunnel_entrance.txt’ will be used by
+ GRAL to remove particles up to a height of 5 m.
+ Other buildings may be digitized following this step.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Oppositelane"
+
+\end_inset
+
+Defining the area around a tunnel entrance of the opposite lane 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/9echt.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Generating-the-‘buildings.dat’"
+
+\end_inset
+
+Generating the ‘buildings.dat’ file using the GUI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/9a.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Effect of traffic at the opposite lane on the tunnel jet
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+It can be assumed that whenever a tunnel jet stream crosses the opposite
+ lane it will be destroyed by the vehicle’s induced turbulence.
+ In the GRAL model it is possible to define the areas of traffic at the
+ opposite lanes as described in the following:
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Define the area of the opposite lane by digitizing a building (the height
+ of the ‘building’ doesn’t matter) using the GIS functionality of the GUI
+ (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:OppLaneArea"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ It is reasonable to limit the length of the area to about 100 - 200
+\begin_inset space ~
+\end_inset
+
+m as tunnel jets typically do not exceed this length.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Select the prognostic mode in the GUI in the ‘Project’ menu, then press
+ the button ‘Building file’ in the menu ‘Computation’ (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Generating-the-‘buildings.dat’"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The ‘buildings.dat’ file will be generated in the ‘Computation’ subdirectory.
+ Rename this file to ‘opposite_lane.txt’.
+ Make sure that no other real buildings have already been digitized with
+ the GUI, as all coordinates in the file ‘opposite_lane.txt’ will be used
+ by GRAL to remove particles up to a height of 4
+\begin_inset space ~
+\end_inset
+
+m.
+ Other buildings may be digitized following this step.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:OppLaneArea"
+
+\end_inset
+
+Defining the area of the opposite lane (make sure no other buildings have
+ been digitized yet)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/11.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\paragraph_spacing onehalf
+Tunnel portals at depressed level
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Naturally the effects of the ambient wind on the tunnel jet are weaker given
+ that the tunnel portal is situated below surface level.
+ In principle there are two ways to simulate this in GRAL:
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Obstacles (buildings) can be defined with heights equal to the depth of
+ the depressed level where the tunnel portal is situated.
+ An example (Kaisermuehlentunnel in Vienna) is given in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TunnelObstacles"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In this case the heights of the receptor points M1 – M5 were set to 7.5
+\begin_inset space ~
+\end_inset
+
+m above ground, as they were placed 2.5
+\begin_inset space ~
+\end_inset
+
+m above ground in reality and the tunnel portal is situated 5
+\begin_inset space ~
+\end_inset
+
+m below surface level.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+Use of high-resolution topographical data.
+ Firstly, GRAMM simulations must be carried out using these data.
+ Note that the horizontal resolution of GRAMM can be rather coarse.
+ In the case of the Kaisermuehlentunnel, a horizontal resolution of 25
+\begin_inset space ~
+\end_inset
+
+m was chosen.
+ Subsequently, when running GRAL, the option to use high resolution original
+ topographical data must be selected in the GUI (as described in sect.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Complex-terrain"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TunnelTopo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ depicts topography (purple shading) and buildings (green contours) around
+ the Kaisermuehlentunnel, Vienna.
+ An additional, building with a height of 0.1
+\begin_inset space ~
+\end_inset
+
+m has been defined (large green square) to invoke the microscale, prognostic
+ wind-field model of GRAL as outlined in sect.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Complex-terrain"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Receptors were placed as they were in the real world at 2.5
+\begin_inset space ~
+\end_inset
+
+m above ground.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Both, options 1) and 2) resulted in quite similar results for the Kaisermuehlent
+unnel.
+ However, the recommended method is the utilization of high-resolution terrain
+ but with a caveat that the terrain must be of good quality and checked/filtered
+ first before use.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TunnelObstacles"
+
+\end_inset
+
+Using obstacles (green) to account for the fact that a tunnel portal is
+ below the surface; traffic lanes are in yellow
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/13.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TunnelTopo"
+
+\end_inset
+
+Using topographical data (ViennaGIS - www.wien.gv.at/viennagis/) to account
+ for the fact that a tunnel portal is below the surface; traffic lanes are
+ in yellow; building contours are in green
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename RecommendationsPictures/14.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\paragraph_spacing onehalf
+Odour dispersion simulations using GRAL
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Odour dispersion simulations using GRAL aim to provide ‘odour-hours frequencies’
+, which form the basis for judging annoyance or nuisance in an area (for
+ the exact definition of an odour hour read for instance Oettl et al., 2018).
+ In addition, the GUI supports the computation of percentiles of mean-hourly
+ odour concentrations.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+It is recommended to use the ‘concentration-variance’ model (Oettl and Ferrero,
+ 2017) for assessing odour-hours instead of a constant-factor model.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Based on comprehensive investigations (Oettl et al., 2014) the following
+ guidance is provided to ensure traceability and sensible results when predictin
+g odour from animal husbandry operations using GRAL: 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Odour emissions from natural ventilated animal stables should be considered
+ an area source close to the building facade (where the windows are situated),
+ 1.5
+\begin_inset space ~
+\end_inset
+
+m above ground and with a vertical extension of 1.0
+\begin_inset space ~
+\end_inset
+
+m.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+Horizontal grid spacing should be in the range of 2 – 3
+\begin_inset space ~
+\end_inset
+
+m when modelling building downwash effects.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+The vertical grid spacing of the first cell above ground should not exceed
+ 3
+\begin_inset space ~
+\end_inset
+
+m, and the vertical stretching factor should not be larger than 1.05.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+The elevation for the concentration grid should be 1.5
+\begin_inset space ~
+\end_inset
+
+m above ground and its vertical extension should be 1.0
+\begin_inset space ~
+\end_inset
+
+m.
+ 
+\end_layout
+
+\begin_layout Itemize
+For computing annual odour hours, odour thresholds of 1
+\begin_inset space ~
+\end_inset
+
+OU/m³ should be used.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+It is recommended that odours from different species (pigs, poultry etc.)
+ are not considered cumulative due to the different nature of the odours.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing onehalf
+For all-in / all-out systems it is recommended to take into account the
+ saw-tooth cycle of emissions.
+ Otherwise constant odour emissions in time may be adequate.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\paragraph_spacing onehalf
+References
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Ling, H., S.Ch.C.
+ Lung, and U.
+ Uhrner (2017): Modelling Asians Residents Exposure using GRAL.
+ 3rd GRAL Workshop 27-28 June 2017, Graz, Austria.
+ 
+\end_layout
+
+\begin_layout Standard
+(accessible via http://lampx.tugraz.at/gral/administrator/index.php) 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Oettl, D., P.
+ J.
+ Sturm, M.
+ Bacher, G.
+ Pretterhofer, R.
+ A.
+ Almbauer (2002): A simple model for the dispersion of pollutants from a
+ road tunnel portal.
+ Atmos.
+ Environ., 36, 2943-2953.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Oettl, D., R.
+ Schlacher, R.
+ Triller, A.
+ Pollet, B.
+ Spernbauer, Th.
+ Pongratz (2014): Grundlagen für die Modellierung der Geruchsausbreitung
+ aus der Tierhaltung mit dem Lagrange’schen Partikelmodell GRAL.
+ Amt d.
+ Stmk.
+ Landesregierung, Referat Luftreinhaltung, Nr.
+ Lu-04-2014, 50 S.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Oettl, D., and E.
+ Ferrero (2017): A simple model to assess odour hours for regulatory purposes.
+ Atmos Environ, 155, 162-173 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Oettl, D., M.
+ Kropsch, and M.
+ Mandl (2018): Odour assessment in the vicinity of a pig-fatting farm using
+ field inspections (EN 16841-1) and dispersion modelling.
+ Atmos Environ, 181, 54-60 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+US-EPA (2000): Meteorological Monitoring Guidance for Regulatory Modeling
+ Applications.
+ EPA-454/R-99-005.
+ Office of Air and Radiation.
+ Office of Air Quality Planning and Standards.
+ Research Triangle Park, NC 27711, p 171 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+VDI 3783-8 (2012): Environmental meteorology – Turbulence parameters for
+ dispersion models supported by measurement data.
+ Kommission Reinhaltung der Luft im VDI und DIN, Postfach 101139, 40002
+ Düsseldorf.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+VDI 3894 (2011): Emissions and immissions from animal husbandries.
+ Housing systems and emissions – Pigs, cattle, poultry, horses.
+ Kommission Reinhaltung der Luft im VDI und DIN, Postfach 101139, 40002
+ Düsseldorf.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+Wilhelm, K.
+ (2017): Flat areas in GRAMM – simplest case or challenge? 3rd GRAL Workshop
+ 27-28 June 2017, Graz, Austria
+\end_layout
+
+\begin_layout Standard
+(accessible via http://lampx.tugraz.at/gral/administrator/index.php) 
+\end_layout
+
+\end_body
+\end_document

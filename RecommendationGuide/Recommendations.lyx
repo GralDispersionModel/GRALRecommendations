@@ -114,7 +114,7 @@ Recommendations when using the GRAL/GRAMM modelling system
 
 \series bold
 \bar under
-Version 20.03
+Version 21.09
 \end_layout
 
 \begin_layout Standard
@@ -334,7 +334,7 @@ General hints for using GRAMM/GRAL
 
 \begin_layout Subsubsection
 \paragraph_spacing onehalf
-Roughness lengths
+Roughness length
 \end_layout
 
 \begin_layout Standard
@@ -350,16 +350,56 @@ noprefix "false"
 \end_inset
 
  lists ranges for roughness lengths per land-use type.
- If running GRAL without GRAMM, one of these values representing the model
+ 
+\end_layout
+
+\begin_layout Standard
+If running GRAL without GRAMM, one of these values representing the model
  domain may be input into the graphical user interface (GUI).
  When running GRAL in this way, the roughness length as defined in the GUI
  is used for the entire model domain.
- When running GRAMM, the user may create a CORINE-based land-use file containing
- spatially non-homogenous roughness lengths.
- When GRAL is coupled with GRAMM, the user-defined land-use file and therefore,
- roughness lengths, are imported from GRAMM.
- The prescribed value in the GUI is not used in this case.
+ Even if buildings are taken explicitly into account in GRAL simulations,
+ it is necessary to set a mean roughness length in such cases, except the
+ option “Adaptive Roughness” is used.
+ If GRAL is coupled with GRAMM, the user-defined land-use file and therefore
+ spatially varying surface roughness lengths are imported from the GRAMM
+ model.
+ The prescribed roughness value in the GUI is not used in this case.
  
+\end_layout
+
+\begin_layout Standard
+If the Adaptive Roughness option is used, the GUI roughness length defines
+ the minimum surface roughness in the domain area, the specified Adatpive
+ Roughness value defines the maximum surface roughness.
+ The surface roughness is estimated based on buildings and vegetation areas.
+ For vegetation with a height of up to 1 m, the height is interpreted as
+ roughness length.
+\end_layout
+
+\begin_layout Standard
+The optional file 
+\begin_inset Quotes eld
+\end_inset
+
+RoughnessLengthsGral.dat
+\begin_inset Quotes erd
+\end_inset
+
+ overrules the adaptive surface roughness algorithm and the GRAMM rouhness
+ and defines the spatially varying surface roughness based on the values
+ defined in this file.
+ This file must be an ESRI ASCii raster file and the file must match the
+ flow field raster (cell number, cell size).
+\end_layout
+
+\begin_layout Standard
+When running GRAMM, the user may create a CORINE-based land-use file containing
+ spatially non-homogenous roughness lengths.
+ If GRAMM is used with the Adaptive Roughness option, the Adaptive Roughness
+ is only used if it is higher than the GRAMM Roughness.
+ When coupling with GRAMM, the Adaptive Roughness option should be used
+ carefully (small maximum values).
 \end_layout
 
 \begin_layout Standard
@@ -1471,6 +1511,7 @@ g mountain-valley or land-sea winds with very large model domains.
 \begin_layout Standard
 \paragraph_spacing onehalf
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -1630,7 +1671,7 @@ status open
 
 t = t
 \backslash
-textsubscript{user}(t = 21,600 s)
+textsubscript{user}(t = 21600 s)
 \end_layout
 
 \end_inset
@@ -1667,9 +1708,21 @@ status open
 
 \begin_layout Plain Layout
 
-t = 1.5 t
+
 \backslash
-textsubscript{user}
+begin{tabular}{p{22mm}}   t = Min[1.5 t
+\backslash
+textsubscript{user}, 3600] 
+\backslash
+newline (t = 3 t
+\backslash
+textsubscript{user}) 
+\backslash
+
+\backslash
+   
+\backslash
+end{tabular}  
 \end_layout
 
 \end_inset
@@ -1690,7 +1743,7 @@ status open
 
 t = Min[2 t
 \backslash
-textsubscript{user}, 3,600]
+textsubscript{user}, 3600]
 \end_layout
 
 \end_inset
@@ -1761,7 +1814,7 @@ status open
 
 (t = Min[2 t
 \backslash
-textsubscript{user}, 7,200])
+textsubscript{user}, 7200])
 \end_layout
 
 \end_inset
@@ -1784,7 +1837,7 @@ status open
 
 t = 0.5 t
 \backslash
-textsubscript{user} (t = 21,600 s)
+textsubscript{user} (t = 21600 s)
 \end_layout
 
 \end_inset
@@ -1816,7 +1869,7 @@ textsubscript{user} (t = 21,600 s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-2 m/s < u
+u > 2 m/s 
 \end_layout
 
 \end_inset
@@ -1891,7 +1944,7 @@ status open
 
 t = Min[1.5 t
 \backslash
-textsubscript{user}, 3,600] 
+textsubscript{user}, 3600] 
 \end_layout
 
 \end_inset
@@ -1914,7 +1967,7 @@ status open
 
 t = 0.3 t
 \backslash
-textsubscript{user} (t = 21,600 s)
+textsubscript{user} (t = 21600 s)
 \end_layout
 
 \end_inset
@@ -1962,7 +2015,7 @@ status open
 
 (t = Min[1.5 t
 \backslash
-textsubscript{user}, 7,200])
+textsubscript{user}, 7200])
 \end_layout
 
 \end_inset
@@ -2032,7 +2085,7 @@ status open
 
 t = 0.17 t
 \backslash
-textsubscript{user} (t = 21,600 s)
+textsubscript{user} (t = 21600 s)
 \end_layout
 
 \end_inset
@@ -2080,7 +2133,7 @@ status open
 
 t = Min[t
 \backslash
-textsubscript{user}, 3,600]
+textsubscript{user}, 3600]
 \end_layout
 
 \end_inset
@@ -2100,6 +2153,10 @@ textsubscript{user}, 3,600]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -2314,8 +2371,9 @@ In some cases, the user may require a small modelling domain.
  In addition, the catabatic forcing can save CPU time in order to represent
  catabatic processes with smaller integration times.
  If possible however, it is recommended that the model domain is selected
- large enough to contain all important terrain features playing a role in
- the development of drainage flows.
+ large enough to contain all important terrain characteristics playing a
+ role in the development of drainage flows instead of using the 'catabatic
+ forcing' option.
 \end_layout
 
 \begin_layout Subsection
